@@ -1,0 +1,137 @@
+<!DOCTYPE html> 
+<html dir="rtl">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <!--name of page-->
+      <title>payment page</title> 
+      <!--css -->
+      <link rel="stylesheet" type="text/css" href="styleofheaerandfooter.css">
+      <link rel="stylesheet" type="text/css" href="stylepay.css">
+       
+      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   </head>
+   <body>
+        <!------------------ start of header -------------------->
+      <header>
+         <!--list/menu-->
+         <div id="menu-bar" class="fas fa-bars"></div>
+         <!--name of our project-->
+         <a href="projectmain.html" class="logo">عتيق</a>
+         <!--address/page name in header,Move to another page -->
+         <nav class="navbar">
+            <a href="projectmain.html">الصفحة الرئيسية</a>
+            <a href="project.php">القطع التراثية</a>
+            <a href="sellProdectPage.php">بيع قطعة</a>
+            <a href="projectmain.html #review">اراء العملاء</a> 
+         </nav>
+         <!--icons shopping and search -->
+         <div class="icons">
+             <a href="project3.html"><i class="fas fa-bag-shopping" id="shopping-btn"></i></a> 
+         </div>
+      </header>
+      <!------------------ end of header -------------------->
+
+      <!------------------ start of pay -------------------->
+      <section class="home">
+         <div class="container">
+         <form id="myForm">
+            <fieldset class="information">
+               <h4>العنوان</h4>
+
+             <label for="name">الاسم :</label>
+             <input type="text" id="name" name="name" ><br><br>
+  
+             <label for="email">البريد الالكتروني :</label>
+             <input type="email" id="email" name="email" ><br><br>
+
+             <label for="number">رقم الهاتف:</label>
+             <input type="number" id="number" name="number" ><br><br>
+
+             <label for="city">المدينة:</label>
+             <input type="text" id="city" name="city" ><br><br>
+
+             <label for="state">الحي:</label>
+             <input type="text" id="state" name="state" ><br><br>
+
+            </fieldset>
+
+
+
+
+            <fieldset class="card">
+               <h4>معلوات الدفع </h4>
+
+            <label for="cardnumber">رقم البطاقة</label>
+            <input type="number" name="cardnumber" id="cardnumber" placeholder="- - - - - - - - - - - -" ><br><br>
+                     
+            <label for="exirddate">تاريخ الانتهاء</label>
+            <input type="number" name="exirddate" id="exirddate" placeholder="MM/YY" ><br><br>
+
+            <label for="CVC">CVV: رمز التحقق</label>
+            <input type="password" name="CVC" id="CVC" ><br><br>
+
+            </fieldset>
+
+
+             <button type="submit">Submit</button>
+           
+         </form>
+      </div>
+      </section>
+   
+      <script>
+            const form = document.getElementById('myForm');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // prevent the form from submitting
+  
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const number = document.getElementById('number').value;
+  
+  if (name === '' || email === '' || number ==='' || cardnumber === '' || exirddate === '' || CVC === '' || city==="" || state==="") {
+    alert('Please fill in all fields');
+    return false;
+  }
+  
+  // if all fields are filled, move to the next page
+  alert('تم ارسال البيانات بنجاح ');
+  window.location.href = 'verification.html';
+});
+   </script>
+     
+      <!------------------ end of pay -------------------->
+
+      <!------------------ start of footer -------------------->
+      <section class="footer">
+         <div class="box-container">
+            <div class="box">
+               <h3>من نحن ؟</h3>
+               <p>عتيق. متجر لبيع و شراء القطع التراثية القديمة و النادرة </p>
+               <p>عتيق .لقاء الماضي بالحاضر</p>
+            </div>
+            <div class="box">
+               <h3>الوصل السريع </h3>
+               <a href="projectmain.html">الصفحة الرئيسية </a>
+               <a href="project.php">القطع التراثية </a>
+               <a href="sellProdectPage.php">بيع قطعة </a>
+               <a href="#review">اراء العملاء </a> 
+               <a href="commonquestionpage.html">الاسئلة الشائعة </a>
+            </div>
+            <div class="box">
+               <h3>تواصل معنا  </h3>
+               <a href="mailto:ourproject@gamil.com">الايميل </a>
+               <a href="tel:0509876432">رقم الهاتف </a>
+               <a href="https://maroof.sa/">وزارة التجارة -معروف</a>
+            </div>
+         </div>
+         <h1 class="credit">created by<span>فريق عتيق </span>| 
+            <small>&copy;all rights reserved</small></h1>
+      </section>
+      <!------------------ end of footer -------------------->
+      <!-- js-->
+      <script type="text/javascript" src="style.js"></script>
+   </body>
+   </html>

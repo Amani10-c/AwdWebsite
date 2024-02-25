@@ -1,0 +1,219 @@
+<!DOCTYPE html> 
+<html dir="rtl">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <!--name of page-->
+      <title>our project</title> 
+      <!--css -->
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" type="text/css" href="styleofheaerandfooter.css">
+
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   </head>
+   <body>
+      <!------------------ start of header -------------------->
+      <header>
+         <!--list/menu-->
+         <div id="menu-bar" class="fas fa-bars"></div>
+         <!--name of our project-->
+         <a href="projectmain.html" class="logo"><strong>عتيق</strong></a>
+         <!--address/page name in header,Move to another page -->
+         <nav class="navbar">
+            <a href="project.php">القطع التراثية</a>
+            <a href="sellProdectPage.php">بيع قطعة</a>
+         </nav>
+         <!--icons shopping and search -->
+         <div class="icons">
+            <i class="fas fa-search" id = search-btn></i>
+            <a href="project3.html"><i class="fas fa-bag-shopping" id="shopping-btn"></i></a>
+            <a href="register.html"><i class="fa-solid fa-user" id="user-btn"></i></a>  
+         </div>
+         <!--label of search bar (seach here...)-->
+         <form action="" class="search-btn-container">
+            <input type="search" id="search-bar" placeholder="search here.....">
+            <label for="search-bar" class="fas fa-search"></label>
+         </form>
+      </header>
+      <!------------------ end of header -------------------->
+
+
+
+      <!------------------ start of home -------------------->
+      <section class="home" id="home">
+         <div class="content">
+            <!-- Text on images-->  
+            <h1>ثقافتنا هويتنا </h1>
+            <p>our culture,our identity</p>
+         </div>
+         <!--moveing images-->
+         <div class="controls">
+            <span class="img-btn active" data-src="al-sadu.jpg"></span>
+            <span class="img-btn" data-src="saudiwomen.jpg"></span>
+            <span class="img-btn" data-src="saudi.jpg"></span>
+            <span class="img-btn" data-src="olddiraiyah.jpg"></span>
+         </div>
+         <!--<audio controls autoplay hidden>
+            <source src="foundingday.mp3" type="audio/mpeg" >
+         </audio>-->
+         <!--default image -->
+         <div class="images-container">
+            <img src="olddiraiyah.jpg" id="img-slider">
+         </div>
+      </section>
+      <!------------------ end of home -------------------->
+
+      
+
+      <!------------------ start of Special products -------------------->
+      <!--title of Special products -->  
+      <section class="products" id="products">
+         <h2 class="heading">
+            قطع تراثية مميزة 
+         </h2>
+         <!-- information of Special products -->  
+         <div class="box-container">
+            <!--product (1)-->
+            <div class="box">
+               <!--img-->
+               <img src="rado1.jpg" alt="old radio">
+               <div class="content">
+                  <h3><i class="fa-solid fa-tag" style="color: #e70d39;"></i>25  ريال سعودي</h3>
+                  <p>راديو قديم  من  شركةDLC، يعمل بالكهرباء </p>
+                  <div class="stars">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                  </div>
+                   <!--button to add product in bag-->
+                  <a href="project3.html" class="btn" >اضافة للسلة  </a>
+               </div>
+            </div>
+            <!--product (2)-->
+            <div class="box">
+               <!--img-->
+               <img src="coffeecup.jpg" alt="old coffee cup">
+               <div class="content">
+                  <h3><i class="fa-solid fa-tag" style="color: #e70d39;"></i>15 ريال سعودي</h3>
+                  <p>طقم فناجيل ، ابو سيفين و نخلة </p>
+                  <div class="stars">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                  </div>
+                  <!--button to add product in bag-->
+                  <a href="project3.html" class="btn">اضافة للسلة </a>
+               </div>
+            </div>
+            <!--product (3)-->
+            <div class="box">
+               <!--img-->
+               <img src="gameboy.jpg" alt="gameboy ">
+               <div class="content">
+                  <h3><i class="fa-solid fa-tag" style="color: #e70d39;"></i>30 ريال سعودي</h3>
+                  <p>لعبة قيم بوي الاصلية ، مع عدة اشرطة </p>
+                  <div class="stars">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                  </div>
+                   <!--button to add product in bag-->
+                  <a href="project3.html" class="btn" >اضافة للسلة </a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!------------------ end of Special products -------------------->
+
+
+
+      <!------------------ start of review -------------------->
+      <section class="review" id="review">
+         <h1 class="heading"><span>أراء</span><span>العملاء</span></h1>
+         <section class="box-container">
+            <table>
+            <thead>
+               <tr>
+                  <th>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="far fa-star"></i>
+                  </th>
+                  <th>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="far fa-star"></i>
+                  </th>
+                  <th>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="far fa-star"></i>
+                  </th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>المنتجات رائع و نادرة،احببت ذلك</td>
+                  <td>متجر ممتاز ، بالتوفيق</td>
+                  <td>متجر ممتازماشاء الله .احببت تصمم الموقع للغاية</td>
+               </tr>
+            </tbody>
+            <tfoot>
+               <tr>
+                  <td><img src="user1.jpg" alt="user icon"><h4>محمد </h4></td>
+                  <td><img src="user2.jpg" alt=""><h4>سارة </h4></td>
+                  <td><img src="user2.jpg" alt=""><h4>نورة</h4></td>
+               </tr>
+            </tfoot>
+          </table>
+         </section>
+      </section>
+      <!------------------ end of review -------------------->
+
+
+
+      <!------------------ start of footer -------------------->
+      <section class="footer">
+         <div class="box-container">
+
+            <div class="box">
+               <h3>من نحن ؟</h3>
+               <p>عتيق. متجر لبيع و شراء القطع التراثية القديمة و النادرة </p>
+               <p>عتيق .لقاء الماضي بالحاضر</p>
+            </div>
+            <div class="box">
+               <h3>الوصل السريع </h3>
+               <a href="projectmain.html">الصفحة الرئيسية </a>
+               <a href="project.html">القطع التراثية </a>
+               <a href="sellProdectPage.php">بيع قطعة </a>
+               <a href="#review">اراء العملاء </a> 
+               <a href="commonquestionpage.html">الاسئلة الشائعة </a>
+            </div>
+            <div class="box">
+               <h3>تواصل معنا  </h3>
+               <a href="mailto:ourproject@gamil.com">الايميل </a>
+               <a href="tel:0509876432">رقم الهاتف </a>
+               <a href="https://maroof.sa/">وزارة التجارة -معروف</a>
+            </div>
+         </div>
+
+         <h1 class="credit">created by<span>فريق عتيق </span>| 
+            <small>&copy;all rights reserved</small></h1>
+      </section>
+      <!------------------ end of footer -------------------->
+<!-- js-->
+      <script type="text/javascript" src="style.js"></script>
+
+   </body>
+</html>

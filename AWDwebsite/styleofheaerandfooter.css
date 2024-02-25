@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Reem+Kufi+Fun:wght@400;500&family=Tajawal:wght@300;400;500&display=swap');
+
+*{
+	font-family: 'Tajawal', sans-serif;
+	margin: 0; padding: 0;
+	box-sizing: border-box;
+	text-transform: capitalize;
+	outline: none; border: none;
+	text-decoration: none;
+	transition: all .2em linear;
+}
+*::selection{
+	background:#53c653;
+}
+
+
+html{
+	font-size: 62.5%;
+	overflow-x:hidden ;
+	scroll-padding-top: 6em;
+	scroll-behavior: smooth;
+}
+
+
+section{
+ 	padding:2em 9% ;
+}
+
+
+.heading {
+	text-align: center;
+	font-size: 2.5em;
+	background: #bf8040;
+	color: #ffffff;
+	border-radius: .5em;
+	padding: .2em 1em;
+	margin-bottom: 1em;
+}
+
+
+
+
+
+/* header */
+
+header{
+	position: fixed;
+ 	top: 0; left: 0; right: 0;
+ 	background: #bf8040;
+ 	z-index:1000;
+ 	display: flex ;
+ 	align-items: center;
+ 	justify-content: space-between;
+ 	padding: 1em 5%;	
+}
+
+header .logo{
+ 	font-size: 2.5em;
+ 	font-weight: bolder;
+ 	color: #fff;
+ 	text-transform: uppercase;
+}
+
+header .navbar a{
+ 	color: #fff;
+ 	font-size:2em;
+ 	margin: 0 .8em;
+ 	cursor: progress;
+}
+
+header .navbar  a:hover{
+ 	color: rgb(0, 0, 0);
+}
+
+
+header .icons i{
+ 	font-size: 1.5em;
+    color:#fff;
+ 	cursor: pointer;
+ 	margin-right: 2em;
+
+}
+header .icons i:hover{
+ 	color: rgb(0, 0, 0); 
+}
+
+
+header .search-btn-container{
+	position: absolute;
+	top: 100%; left: 0; right: 0;
+	padding: 1.5em 2em;
+	background:#bf8040;
+	border-top: .1em solid rgb(0, 0, 0);
+	display: flex;
+	align-items: center;
+	z-index: 1001;
+	clip-path: polygon(0 0,100% 0,100% 0,0 0);
+}
+
+header .search-btn-container.active{
+	clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+}
+
+header .search-btn-container #search-bar{
+	width: 100%;
+	padding: 1em;
+	text-transform: none;
+	color: #333;
+	font-size: 1.7em;
+	border-radius: .5em;
+}
+header .search-btn-container label{
+	color:#fff ;
+	cursor: pointer;
+	font-size: 3em;
+	margin-left: 1.5em;
+}
+header .search-btn-container label:hover{
+	color: rgb(0, 0, 0) ;
+}
+
+
+/* list/menu */
+
+#menu-bar{
+ 	color: #fff;
+ 	border: 0.5em solid #fff;
+ 	border-radius: .5em;
+ 	font-size: 1.5em;
+ 	padding: .5em 0.5em;
+ 	cursor:pointer ;
+ 	display: none;
+}
+
+
+
+
+/* footer */
+
+.footer{
+	background: #333;
+}
+.footer .box-container{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+}
+
+.footer .box-container .box{
+	padding: 1em 0;
+	flex: 1 1 25em;
+}
+
+.footer .box-container .box h3{
+	font-size: 2.5em;
+	padding: .7em 0;
+	color: #fff;
+}
+.footer .box-container .box p{
+	font-size: 1.5em;
+	padding: .7em 0;
+	color: #eee;
+}
+.footer .box-container .box a{
+	display: block;
+	font-size: 2.5em;
+	padding: .7em 0;
+	color: #fff;
+	cursor: progress;
+}
+.footer .box-container .box a:hover{
+	color: #bf8040;
+	text-decoration: underline;
+}
+.footer .credit{
+	text-align:center;
+	padding: 1em 1em;
+	margin-top: 1em;
+	font-size: 2rem;
+	font-weight: normal;
+	color: #fff;
+	border-top: .1em solid rgba(255, 255, 255, .2);
+}
+.footer .credit span{
+	color:#bf8040 ;
+}
+
+
+
+
+
+
+
+/* size of window ...*/
+
+@media(max-width:991px){
+ 	header{
+ 		padding: 1em;
+ 	}
+ 	section{
+ 		padding: 2em;
+ 	}
+
+}
+@media(max-width:768px){
+ 	#menu-bar{
+ 		display: initial;
+ 	}
+ 	header .navbar{
+ 		position: absolute;
+ 	    top:100%; right: 0; left: 0;
+ 	    background: #bf8040;
+ 	    border-top: .1em solid rgba(255, 255, 255, 2);
+ 	    padding: 1em 2em;
+ 	    clip-path:polygon(0 0,100% 0,100% 0,0 0);
+ 	    
+ 	}
+ 	header .navbar.active{
+ 	 clip-path:polygon(0 0,100% 0,100% 100%,0 100%);
+
+    }
+ 	header .navbar a{
+ 		display: block;
+ 		border-radius: .5em;
+ 		padding: 1.5em;
+ 		margin: 1.5em 0;
+ 		background: #996633 ;
+ 	}
+}
+
+ @media (max-width:450px){
+ 	html{
+ 		font-size: 50%;
+ 	}
+ 	.heading span{
+ 		font-size: 2.5em;
+ 	}
+}

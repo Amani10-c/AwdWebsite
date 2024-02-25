@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>register</title> 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+        .form-container {
+            min-width: 100vh;
+            margin: 100px auto;
+            background-color: #c1a967;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .form-container form {
+            padding: 20px;
+            background-color: #ebe8e1;
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            width: 500px;
+            border-radius: 5px;
+        }
+        .form-container form .box {
+           width: 100%;
+           border-radius: 5px;
+           padding: 12px 14px;
+           font-size: 18px;
+           color: black;
+           margin: 10px 0;
+           background-color: #c1a967;
+        }
+           .form-container form h2 {
+            margin-bottom: 10px;
+            font-size: 30px;
+            color: black;
+            text-transform: uppercase;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px 30px;
+            background-color: #4b4405;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            text-align: center;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form action="register.php" method="POST">
+            <h2>User Registration</h2>
+                <label for="username">Username:</label>
+                <br>
+                <input type="text" id="username" name="User_name" required>
+        <br>
+                <label for="password">Password:</label>
+                <br>
+                <input type="password" id="password" name="User_password" required>
+<br>
+                <label for="email">Email:</label>
+                <br>
+                <input type="email" id="email" name="email" required>
+<br>
+                <label for="city">City:</label>
+                <br>
+                <input type="text" id="city" name="User_city" required>
+                <br>
+                <br>
+                <br>
+                <input type="submit" value="Submit" class="submit-btn">
+                <br>
+           <p> Do have account? <a href="login.html">Login</a></p>
+        </form>
+    </div>
+</body>
+</html>

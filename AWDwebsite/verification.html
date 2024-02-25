@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html dir="rtl">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <!--name of page-->
+      <title>verification</title> 
+      <link rel="stylesheet" type="text/css" href="stylevcode.css">
+
+      
+   </head>
+   <!------------------ start body -------------------->
+   <body>
+      <div class="container">
+      <form class="vcode">
+         <h4>Enter verification code</h4>
+         <p>Enter the 4 digit code we sent to your email </p>
+         <div class="informationvcode">
+            <input type="number" class="code" placeholder="0" min="0" max="9" id="code">
+            <input type="number" class="code" placeholder="0" min="0" max="9" id="code">
+            <input type="number" class="code" placeholder="0" min="0" max="9" id="code">
+            <input type="number" class="code" placeholder="0" min="0" max="9" id="code">
+         </div>
+
+        </form>
+    
+      <button type="submit" class="btntanks" onclick="openPopup()">submit</button> 
+     <div class="popup" id="popup">
+         <img src="true.jpg" alt="">
+         <h2>!شكرا لك </h2>
+         <p> تمت عملية الدفع بنجاح، سيتم التواصل معك قريبا. </p>
+         <a href="projectmain.html"><button onclick="closePopup()">حسنا</button></a>
+      </div>
+   </div>
+    
+
+
+
+   <script>
+      let Popup = document.getElementById('popup');
+
+      function openPopup() {
+         popup.classList.add("open-popup");
+
+      }
+      function closePopup() {
+         popup.classList.remove("open-popup");
+
+      }
+   </script>
+     
+
+
+
+
+
+     
+   </body>
+   <!------------------ start body -------------------->
+</html>

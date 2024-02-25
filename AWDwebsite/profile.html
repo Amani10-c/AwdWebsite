@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+    <style>
+        /* CSS styles for the profile page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+        }
+        .profile-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .profile-info {
+            margin-bottom: 20px;
+        }
+        .profile-info label {
+            font-weight: bold;
+            color: #666;
+        }
+        .profile-info span {
+            display: inline-block;
+            margin-left: 10px;
+            color: #333;
+        }
+        .profile-info span.email {
+            color: #007bff;
+        }
+        .profile-info span.city {
+            color: #28a745;
+        }
+        .update-form {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .update-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .update-form input[type="email"] {
+            width: 250px;
+            padding: 5px;
+        }
+        .update-form button {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <h1>User Profile</h1>
+        <div class="profile-info">
+            <label>Name:</label>
+            <span><?php echo $user['name']; ?></span>
+        </div>
+        <div class="profile-info">
+            <label>Email:</label>
+            <span class="email"><?php echo $user['email']; ?></span>
+        </div>
+        <div class="profile-info">
+            <label>City:</label>
+            <span class="city"><?php echo $user['city']; ?></span>
+        </div>
+        
+        <div class="update-form">
+            <h2>Update Email</h2>
+            <form method="POST" action="update_email.php">
+                <label for="new_email">New Email:</label>
+                <input type="email" id="new_email" name="new_email" placeholder="Enter new email" required>
+                <br>
+                <button type="submit">Update</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

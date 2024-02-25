@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>سلة التسوق</title>
+    <link rel="stylesheet" type="text/css" href="styleofheaerandfooter.css">
+    <link rel="stylesheet" type="text/css" href="ProjStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <script>
+for (let index = 0; index < array.length; index++) {
+	const element = array[index];
+	     let cartItems = [];
+	
+}
+function addToCart(productName, price) {
+	cartItems.push({ productName: productName, price: price, quantity: 1 });
+	displayCart();
+}
+
+function removeFromCart(index) {
+	cartItems.splice(index, 1);
+	displayCart();
+}
+
+function updateQuantity(index, quantity) {
+	if (quantity <= 0) {
+		removeFromCart(index);
+	} else {
+		cartItems[index].quantity = quantity;
+		displayCart();
+	}
+}
+
+function removeAllItems() {
+	cartItems = [];
+	displayCart();
+}
+
+function calculateTotal() {
+	let subtotal = 0;
+	cartItems.forEach(item => {
+		subtotal += item.price * item.quantity;
+	});
+	let tax = subtotal * 0.1; // 10% tax
+	let total = subtotal + tax;
+	document.getElementById("subtotal").textContent = subtotal.toFixed(2) + "R";
+	document.getElementById("tax").textContent = tax.toFixed(2) + "R";
+	document.getElementById("total").textContent = total.toFixed(2) + "R";
+}
+
+function displayCart() {
+	let cartList = document.getElementById("cart-items");
+	cartList.innerHTML = "";
+	cartItems.forEach((item, index) => {
+		let li = document.createElement("li");
+		li.textContent = ${item.productName}: ${item.price} ر.س × ;
+		let quantityInput = document.createElement("input");
+		quantityInput.type = "number";
+		quantityInput.value = item.quantity;
+		quantityInput.min = "1";
+		quantityInput.addEventListener("input", function() {
+			updateQuantity(index, parseInt(this.value));
+		});
+		li.appendChild(quantityInput);
+		let deleteButton = document.createElement("button");
+		deleteButton.textContent = "حذف";
+		deleteButton.addEventListener("click", function() {
+			removeFromCart(index);
+		});
+		li.appendChild(deleteButton);
+		cartList.appendChild(li);
+	});
+	calculateTotal();
+}
+    </script>
+</head>
+<body>
+    <header dir="rtl">
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <a href="projectmain.html" class="logo">عتيق</a>
+        <nav class="navbar">
+            <a href="projectmain.html">الصفحة الرئيسية</a>
+            <a href="project.html">القطع التراثية</a>
+            <a href="sellProdectPage.html">بيع قطعة</a>
+            <a href="projectmain.html #review">اراء العملاء</a>
+        </nav>
+        <div class="icons">
+            <i class="fas fa-search" id="search-btn"></i>
+            <a href="project3.html"><i class="fas fa-bag-shopping" id="shopping-btn"></i></a>
+            <a href="project4.html"><i class="fa-solid fa-user" id="user-btn"></i></a>
+        </div>
+        <form action="" class="search-btn-container">
+            <input type="search" id="search-bar" placeholder="البحث هنا.....">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+    </header>
+    <div class="wrapper">
+        <h1>سلة التسوق | <a href="project.html">الرجوع الى صفحة المنتجات</a></h1>
+        <div class="project">
+            <div class="shop">
+                <div id="cart">
+                     <ul id="cart-items"></ul>
+                </div>
+            </div>
+            <div class="right-bar">
+                <p> <span>المجموع الفرعي</span> <span id="subtotal">0R</span></p>
+                <p> <span>الضريبة (10%)</span> <span id="tax">0R</span></p>
+                <p> <span>الإجمالي</span> <span id="total">0R</span></p>
+                <a href="payment.html"><i class="fa fa-shopping-cart"></i> إدفع </a>
+                <button onclick="removeAllItems()">حذف الكل</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="styleofheaerandfooter.css">
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<title>منتجاتنا</title>
+</head>
+<body>
+    <!------------------ start of header -------------------->
+    <header>
+        <!--list/menu-->
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <!--name of our project-->
+        <a href="projectmain.html" class="logo">عتيق</a>
+        <!--address/page name in header,Move to another page -->
+        <nav class="navbar">
+            <a href="projectmain.html">الصفحة الرئيسية</a>
+            <a href="project.html">القطع التراثية</a>
+            <a href="sellProdectPage.html">بيع قطعة</a>
+            <a href="projectmain.html #review">اراء العملاء</a> 
+        </nav>
+        <!--icons shopping and search -->
+        <div class="icons">
+            <i class="fas fa-search" id="search-btn"></i>
+            <a href="project3.html"><i class="fas fa-bag-shopping" id="shopping-btn"></i></a>
+            <a href="project4.html"><i class="fa-solid fa-user" id="user-btn"></i></a>  
+        </div>
+        <!--label of search bar (seach here...)-->
+        <form action="" class="search-btn-container">
+            <input type="search" id="search-bar" placeholder="search here.....">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+    </header>
+    <!------------------ end of header -------------------->
+
+    <div class="heading">
+        <h1>منتجاتنا</h1>
+    </div>
+
+    <div class="containery">
+        <!-- product1-->
+        <div class="boxy">
+            <img src="المنتج1.jpg" alt="البخنق" class="boxy-img">
+            <div class="boxy-body">
+                <h1 class="boxy-title">البخنق</h1>
+                <span>ر.س 90</span>
+                <a href="productdetails.html" class="boxy-btn">عرض</a>
+                <a href="#" class="boxy-btn" onclick="addToCart('البخنق', 90)">إضافة إلى السلة</a>
+            </div>
+        </div>
+        
+        <!-- product 2-->
+        <div class="boxy">
+            <img src="المنتج2.png" alt="البيجر" class="boxy-img">
+            <div class="boxy-body">
+                <h1 class="boxy-title">البيجر</h1>
+                <span>ر.س 90</span>
+                <a href="proudct2.html" class="boxy-btn">عرض</a>
+                <a href="#" class="boxy-btn" onclick="addToCart('البيجر', 90)">إضافة إلى السلة</a>
+            </div>
+        </div>
+
+        <!-- product 3-->
+        <div class="boxy">
+            <img src="المنتج3.png" alt="المبخرة" class="boxy-img">
+            <div class="boxy-body">
+                <h1 class="boxy-title">المبخرة</h1>
+                <span>ر.س 90</span>
+                <a href="product3.html" class="boxy-btn">عرض</a>
+                <a href="#" class="boxy-btn" onclick="addToCart('المبخرة', 90)">إضافة إلى السلة</a>
+            </div>
+        </div>
+
+        <!-- product 4-->
+        <div class="boxy">
+            <img src="المنتج16.jpg" alt="مصفف الشعر" class="boxy-img">
+            <div class="boxy-body">
+                <h1 class="boxy-title">مصفف الشعر</h1>
+                <span>ر.س 90</span>
+                <a href="product4.html" class="boxy-btn">عرض</a>
+                <a href="#" class="boxy-btn" onclick="addToCart('مصفف الشعر', 90)">إضافة إلى السلة</a>
+            </div>
+        </div>
+
+        <!-- product 5-->
+        <div class="boxy">
+            <img src="المنتج5.png" alt="التلفاز" class="boxy-img">
+            <div class="boxy-body">
+                <h1 class="boxy-title">التلفاز</h1>
+                <span>ر.س 90</span>
+                <a href="product5.html" class="boxy-btn">عرض</a>
+                <a href="#" class="boxy-btn" onclick="addToCart('التلفاز', 90)">إضافة إلى السلة</a>
+            </div>
+        </div>
+
+        <!-- product 6-->
+        <div class="boxy">
+            <img src="المنتج6.png" alt="المكحلة" class="boxy-img">
+            <div class="boxy-body">
+                <h1 class="boxy-title">المكحلة</h1>
+                <span>ر.س 90</span>
+                <a href="product6.html" class="boxy-btn">عرض</a>
+                <a href="#" class="boxy-btn" onclick="addToCart('المكحلة', 90)">إضافة إلى السلة</a>
+            </div>
+        </div>
+
+<!-- product 7-->
+        <div class="boxy">
+            <img src="المنتج8.png" alt="الهاون" class="boxy-img">
+            <div class="boxy-body">
+                <h1 class="boxy-title">الهاون</h1>
+                <span>ر.س 90</span>
+                <a href="product7.html" class="boxy-btn">عرض</a>
+                <a href="#" class="boxy-btn" onclick="addToCart('الهاون', 90)">إضافة إلى السلة</a>
+            </div>
+        </div>
+
+        <!-- product 8-->
+        <div class="boxy">
+            <img src="المنتج12.jpg" alt="ترمس الماء" class="boxy-img">
+            <div class="boxy-body">
+                <h1 class="boxy-title">ترمس الماء</h1>
+                <span>ر.س 90</span>
+                <a href="product8.html" class="boxy-btn">عرض</a>
+                <a href="#" class="boxy-btn" onclick="addToCart('ترمس الماء', 90)">إضافة إلى السلة</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- سلة التسوق -->
+    <div id="cart">
+        <ul id="cart-items"></ul>
+    </div>
+
+    <!------------------ start of footer -------------------->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>من نحن؟</h3>
+                <p>عتيق. متجر لبيع وشراء القطع التراثية القديمة والنادرة</p>
+                <p>عتيق. لقاء الماضي بالحاضر</p>
+            </div>
+            <div class="box">
+                <h3>الوصل السريع</h3>
+                <a href="projectmain.html">الصفحة الرئيسية</a>
+                <a href="project.html">القطع التراثية</a>
+                <a href="sellProdectPage.html">بيع قطعة</a>
+                <a href="#review">آراء العملاء</a> 
+                <a href="commonquestionpage.html">الأسئلة الشائعة</a>
+            </div>
+            <div class="box">
+                <h3>تواصل معنا</h3>
+                <a href="mailto:ourproject@gamil.com">الإيميل</a>
+                <a href="tel:0509876432">رقم الهاتف</a>
+                <a href="https://maroof.sa/">وزارة التجارة - معروف</a>
+            </div>
+        </div>
+        <h1 class="credit">created by<span>فريق عتيق</span>| 
+            <small>&copy;كل الحقوق محفوظة</small></h1>
+    </section>
+    <!------------------ end of footer -------------------->
+    <!-- js-->
+    <script>
+        let cartItems = []; // المتغير الذي يحتوي على العناصر في سلة التسوق
+
+        function addToCart(productName, price) {
+            // إضافة المنتج إلى سلة التسوق
+            cartItems.push({ productName: productName, price: price });
+            // عرض تأكيد إضافة المنتج
+            alert("تمت إضافة المنتج إلى سلة التسوق بنجاح!");
+            // إعادة عرض سلة التسوق
+            displayCart();
+        }
+
+        function displayCart() {
+            let cartList = document.getElementById("cart-items");
+            // تفريغ قائمة سلة التسوق
+            cartList.innerHTML = "";
+            // إضافة كل عنصر في سلة التسوق إلى القائمة
+            cartItems.forEach(item => {
+                let li = document.createElement("li");
+                li.textContent = ${item.productName}: ${item.price} ر.س;
+                cartList.appendChild(li);
+            });
+            // عرض سلة التسوق
+            document.getElementById("cart").style.display = "block";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+
+p{
+    font-size: 18px;
+    font-family: 'Tajawal',sans-serif;
+    line-height: 2em;
+    
+    }
+
+body{
+    background-color: #EAD5C1;
+}
+
+.faq-heading{
+    font-size: 20px;
+    font-family: 'Tajawal',sans-serif;
+    border-bottom: #777;
+    padding: 65px 60px;
+}
+.CQ-flex{
+ margin: 10px 0;
+padding: 5px;
+font-size: 18px;
+font-family: 'Tajawal',sans-serif;
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+.hr-line{
+  width: 60%;
+  margin: auto;
+  
+}
+/* Style the buttons that are used to open and close the faq-page body */
+.Q {
+    
+    color: #444;
+    cursor: pointer;
+    padding: 30px 20px;
+    width: 70%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: auto;
+}
+.A{
+    margin: auto;
+   width: 60%; 
+   padding: auto;
+   padding: 0 18px;
+    background-color: #EAD5C1;
+    display: none;
+    overflow: hidden;
+   
+}
+
+.active,.Q:hover {
+    background-color: #7A5229;
+    color: #fff;
+}
+
+.Q:after {
+    content: '+';
+    
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+.active:after {
+    content: "-";
+    
+}
+
+.linkCQ{
+     color: #7A5229;
+}
+
+.goodAnswer{
+      margin: auto;
+  
+}
+
+.yesBtn{
+    width: fit-content;
+    margin: auto;
+     cursor: pointer;
+    text-align: center;
+      background-color: #ffffff;
+      padding: 15px 25px;
+    font-size: 20px;
+    border-radius: 15px;
+    
+
+}
+
+.NoBtn{
+    width: fit-content;
+    margin: auto;
+     cursor: pointer;
+    text-align: center;
+      background-color: #ffffff;
+      padding: 15px 25px;
+    font-size: 20px;
+    border-radius: 15px;
+    
+
+}
+
+
+td:hover .yesBtn{
+    border-color:#7A5229;
+    border-width: 3px;
+    border-style: solid;
+}
+    
+td:hover .NoBtn{
+    border-color:#7A5229;
+    border-width: 3px;
+    border-style: solid;
+}
+
+li{
+    list-style-type: square;
+    
+    text-indent: 16px;
+
+}
+
